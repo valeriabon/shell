@@ -1,2 +1,9 @@
 #!/bin/bash
 id -nG
+
+OPTION 2:
+#!/bin/bash
+groups
+
+OPTION 3:
+groups $USER
