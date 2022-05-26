@@ -1,2 +1,5 @@
 #!/bin/bash
 grep --exclude bin /etc/passwd
+
+OPTION 2:
+grep -v bin/etc/passwd
