@@ -1,2 +1,9 @@
 #!/bin/bash
 find ./ -type d -exec chmod +111 {} +
+
+
+OPTION 2:
+chmod ugo+x */
+
+OPTION 3:
+find ./ -type d chmod +x {} +
