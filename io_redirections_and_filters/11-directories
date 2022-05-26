@@ -1,2 +1,5 @@
 #!/bin/bash
 find . -mindepth 1 -type d | wc -l
+
+
+#Encontrar en este directorio (pero) con minimum depth de 1 (o sea a partir de lo que hay adentro de la carpeta en la que estoy) del tipo directorio | word count (wc) del resultado pero de lineas (-l)
