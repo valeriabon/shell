@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Task 8
+for DIR in *
+do
+	echo $DIR | cut -d '-' -f2
+done
