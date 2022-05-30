@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1 | egrep -v "^\d*[13579]$"
+ls -1 | egrep -v "[13579]$"
