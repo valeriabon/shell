@@ -2,5 +2,5 @@
 # Task 8
 for DIR in *
 do
-	echo $DIR | cut -d '-' -f2
+	echo "$DIR" | cut -d '-' -f2
 done
