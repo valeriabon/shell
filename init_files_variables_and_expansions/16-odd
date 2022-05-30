@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1 | egrep -n "\d*[13579]$"
+ls -1 | egrep -n ? | grep -i [1,3,5,7,9]
