@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# This script displays the content of the file /etc/passwd, using the while loop + IFS
+while IFS="" read -r Lread
+do
+	u=$(echo "$Lread" | cut -d ":" -f 1)
+	g=$(echo "$Lread" | cut -d ":" -f 4)
+	h=$(echo "$Lread" | cut -d ":" -f 6)
+	aux1=$(echo "$Lread" | cut -d ":" -f 7)
+	ui=$(echo "$Lread" | cut -d ":" -f 3)
+	aux2=$(echo "$Lread" | cut -d ":" -f 2)
+	aux3=$(echo "$Lread" | cut -d ":" -f 5)
+
+	text="The user ${u} is part of the ${g} gang, lives in ${h} and rides ${aux1}. ${ui}'s place is protected by the passcode ${aux2}, more info about the user here: ${aux3}"
+	echo "$text"
+done < /etc/passwd
