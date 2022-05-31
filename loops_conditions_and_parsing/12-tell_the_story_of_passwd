@@ -13,3 +13,19 @@ do
 	text="The user ${u} is part of the ${g} gang, lives in ${h} and rides ${aux1}. ${ui}'s place is protected by the passcode ${aux2}, more info about the user here: ${aux3}"
 	echo "$text"
 done < /etc/passwd
+
+
+OPTION 2:
+
+#!/usr/bin/env bash
+#This script display passwd with ifs
+
+file=/etc/passwd
+cont=1
+
+while IFS=: read -r username password userid groupid comment homedir cmdshell
+do
+echo "The user $username is part of the $groupid gang, lives in $homedir and rides $cmdshell. $userid's place is protected by the passcode $password, more info about the user here: $comment" 
+
+cont=$((cont + 1))
+done < $file
