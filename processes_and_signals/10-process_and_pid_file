@@ -9,8 +9,8 @@
 echo $$ > /var/run/myscript.pid
 
 trap 'echo Y U no love me?!' SIGINT
-trap "{ echo I hate the kill command ; sudo rm /var/run/myscript.pid; exit 0 }" SIGTERM
-trap "{ sudo rm /var/run/myscript.pid; exit 0 }" SIGQUIT
+trap "{ echo I hate the kill command ; sudo rm /var/run/myscript.pid; exit 0; }" SIGTERM
+trap "{ sudo rm /var/run/myscript.pid; exit 0; }" SIGQUIT
 
 while true
 do
