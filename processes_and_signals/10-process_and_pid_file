@@ -8,12 +8,11 @@
 
 pgrep -f 10-process_and_pid_file > /var/run/myscript.pid
 
-trap 'echo I hate the kill command' SIGTERM
-trap 'echo Y U no love me?!' SIGINT
 while true
 do
 	echo To infinity and beyond
+	trap 'echo I hate the kill command' SIGTERM
+	trap 'echo Y U no love me?!' SIGINT
 done
-trap 'pkill -f  10-process_and_pid_file' SIGQUIT || SIGTERM
 trap 'rm  /var/run/myscript.pid' SIGQUIT || SIGTERM
-
+trap 'pkill -f  10-process_and_pid_file' SIGQUIT || SIGTERM
