@@ -8,7 +8,7 @@ start() {
 }
 
 stop() {
-	kill -9 "$( cat $PIDEN )" & rm /var/run/my_process.pid
+	kill -9 "$( cat /var/run/my_process.pid )" & rm /var/run/my_process.pid
 }
 
 case "$1" in
