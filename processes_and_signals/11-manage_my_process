@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 #
 
-PIDEN=/var/run/my_process.pid
-
 start() {
-	./manage_my_process & echo "$!" > /var/run/my_process.pid
+	./manage_my_process & 
+	echo "$!" > /var/run/my_process.pid
 }
 
 stop() {
-	kill -9 "$( cat /var/run/my_process.pid )" & rm /var/run/my_process.pid
+	kill -9 "$(cat /var/run/my_process.pid)" 
+	rm /var/run/my_process.pid
 }
 
 case "$1" in
