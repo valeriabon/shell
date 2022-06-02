@@ -9,8 +9,8 @@
 echo $$ > /var/run/myscript.pid
 
 remkill() {
-        rm -r /var/run/myscript.pid
-        $sudo pkill -f 10-process_and_pid_file
+        sudo rm /var/run/myscript.pid
+        exit 0
 }
 
 trap 'echo Y U no love me?!' SIGINT
