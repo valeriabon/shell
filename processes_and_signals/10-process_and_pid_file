@@ -8,9 +8,13 @@
 
 echo $$ > /var/run/myscript.pid
 
+remkill() {
+        rm -r /var/run/myscript.pid
+        pkill -f  10-process_and_pid_file
+}
+
 trap 'echo Y U no love me?!' SIGINT
-trap "rm -r /var/run/myscript.pid" SIGQUIT SIGTERM
-trap 'pkill -f  10-process_and_pid_file' SIGTERM SIGTERM
+trap 'remkill' SIGQUIT SIGTERM
 
 while true
 do
