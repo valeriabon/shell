@@ -4,3 +4,7 @@ ps
 
 OPTION 2: (More correct)
 echo $$
+
+
+OPTION 3:
+pidof ./0-what-is-my-pid
