@@ -8,3 +8,12 @@ do
 	echo "To infinity and beyond"
 	sleep 2
 done
+
+
+Option 2:
+
+while :
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
